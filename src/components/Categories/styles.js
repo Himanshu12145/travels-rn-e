@@ -1,4 +1,4 @@
-const {StyleSheet} = require('react-native');
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   item: {
@@ -7,11 +7,11 @@ const styles = StyleSheet.create({
     paddingVertical: 2,
   },
   selectedItem: {
-    color: '#000',
+    color: '#000000',
   },
   itemContainer: {
     marginRight: 17,
-    marginVertical: 14,
+    marginBottom: 14,
   },
   selectedItemContainer: {
     borderBottomColor: '#4681A3',

@@ -130,7 +130,7 @@ module.exports = {
 
     'function-call-argument-newline': 'off',
 
-    'function-paren-newline': 'error',
+    // 'function-paren-newline': ['error', {minItems: 3}],
 
     'generator-star-spacing': 'error',
 
@@ -144,7 +144,7 @@ module.exports = {
 
     'id-match': 'error',
 
-    'implicit-arrow-linebreak': ['error', 'beside'],
+    // 'implicit-arrow-linebreak': ['error', 'beside'],
 
     'init-declarations': 'off',
 
