@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {SafeAreaView, View} from 'react-native';
+import AttractionCard from '../../components/AttractionCard';
 import Categories from '../../components/Categories';
 import Title from '../../components/Title';
 import styles from './styles';
@@ -26,6 +27,18 @@ const Home = () => {
           selectedCategory={selectedCategory}
           onCategoryPress={setSelectedCategory}
         />
+        <View style={styles.row}>
+          <AttractionCard
+            title="Amusement Park"
+            subtitle="Rome"
+            imageSrc="https://images.herzindagi.info/image/2022/Mar/amusement-parks-in-India_g.jpg"
+          />
+          <AttractionCard
+            title="Amusement Park"
+            subtitle="Rome"
+            imageSrc="https://images.herzindagi.info/image/2022/Mar/amusement-parks-in-India_g.jpg"
+          />
+        </View>
       </View>
     </SafeAreaView>
   );
