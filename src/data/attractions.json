@@ -11,7 +11,7 @@
     categories: ['Most Visited', 'Historical'],
     images: [
       'https://www.arttrav.com/wp-content/uploads/2021/06/colosseum-alexandrakorey.jpg',
-      'https://www.history.com/.image/t_share/MTkwODIxMzcwNDI5NDQ5OTEw/gettyimages-1081719544.jpg',
+      'https://images.unsplash.com/photo-1626220611368-ad0a6bbd04ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2938&q=80',
       'https://upload.wikimedia.org/wikipedia/commons/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg',
       'https://static01.nyt.com/images/2022/06/12/world/12italy-colosseum-01/merlin_206622975_bf44e9c5-b817-405f-b46a-33f6fe5f88a8-superJumbo.jpg',
       'http://cdn.cnn.com/cnnnext/dam/assets/200925160752-colosseum-file-restricted.jpg',
@@ -38,7 +38,7 @@
     images: [
       'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/6e/b1/6a/caption.jpg?w=1200&h=-1&s=1',
       'https://www.forbesindia.com/media/images/2022/May/img_184243_tajmahalindia.jpg',
-      'https://www.tajmahal.gov.in/images/tajmahal-view/day/1.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIQtXCz6SoQLZhfoHzVzzLMNhm8mgeJXd15A&usqp=CAU',
     ],
     coordinates: {
       lat: 27.1751,
