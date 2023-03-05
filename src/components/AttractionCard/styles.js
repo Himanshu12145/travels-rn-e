@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     marginTop: 12,
     marginLeft: 6,
+    color: '#000',
   },
   subtitle: {
     fontSize: 10,

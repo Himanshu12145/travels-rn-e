@@ -9,7 +9,7 @@ import categories from '../../data/categories.json';
 
 const ALL = 'All';
 
-const Home = () => {
+const Home = ({navigation}) => {
   const [selectedCategory, setSelectedCategory] = useState(ALL);
   const [data, setData] = useState([]);
 
@@ -43,7 +43,6 @@ const Home = () => {
             <View style={{margin: 32}}>
               <Title text="Where do" style={{fontWeight: 'normal'}} />
               <Title text="you want to go" />
-
               <Title text="Explore Attractions" style={styles.subtitle} />
             </View>
 
@@ -63,6 +62,7 @@ const Home = () => {
                 ? {marginRight: 12, marginLeft: 32}
                 : {marginRight: 32}
             }
+            onPress={() => navigation.navigate('AttractionDetails', {item})}
             title={item.name}
             subtitle={item.city}
             imageSrc={item.images?.length ? item.images[0] : null}
