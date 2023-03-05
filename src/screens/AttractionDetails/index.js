@@ -7,11 +7,14 @@ import {
   Image,
   Pressable,
 } from 'react-native';
+import ImgToBase64 from 'react-native-image-base64';
+
 import InfoCard from '../../components/InfoCard';
 import styles from './styles';
 import Title from '../../components/Title';
 import MapView, {Marker} from 'react-native-maps';
 import {ScrollView} from 'react-native-gesture-handler';
+import Share from 'react-native-share';
 
 const AttractionDetails = ({route, navigation}) => {
   const {item} = route?.params || {};
@@ -24,9 +27,31 @@ const AttractionDetails = ({route, navigation}) => {
     longitudeDelta: 0.009,
     latitudeDelta: 0.009,
   };
-
   const onGalleryNavigate = () => {
     navigation.navigate('Gallery', {images: item?.images});
+  };
+
+  const onShare = async () => {
+    try {
+      const imageWithoutParams = mainImage?.split('?')[0];
+      const imageParts = imageWithoutParams?.split('.');
+      const imageExtension = imageParts[imageParts?.length - 1];
+      const base64Image = await ImgToBase64.getBase64String(mainImage);
+
+      Share.open({
+        title: item?.name,
+        message: 'Hey, I wanted to share with you this amazing attraction',
+        url: `data:image/${imageExtension || 'jpg'};base64,${base64Image}`,
+      })
+        .then(res => {
+          console.log(res);
+        })
+        .catch(err => {
+          err && console.log(err);
+        });
+    } catch (e) {
+      console.log('sharing error :>> ', e);
+    }
   };
   const onBack = () => {
     navigation.goBack();
@@ -45,7 +70,7 @@ const AttractionDetails = ({route, navigation}) => {
                 style={styles.icon}
               />
             </Pressable>
-            <Pressable hitSlop={8}>
+            <Pressable onPress={onShare} hitSlop={8}>
               <Image
                 source={require('../../assets/share.png')}
                 style={styles.icon}
